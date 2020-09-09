@@ -10,7 +10,7 @@ def user_view(request, username):
         is_following = user in request.user.following.all()
     else:
         is_following = False
-    following = len(user.following.all())-1
+    following = len(user.following.all())
     return render(request, "user.html", {"user": user, "tweets": tweets, "is_following": is_following, "following": following})
 
 

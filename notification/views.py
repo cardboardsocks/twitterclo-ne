@@ -6,8 +6,10 @@ from notification.models import Notification
 @login_required
 def notification_view(request):
     notifications = Notification.objects.filter(
-        mentioned_user=request.user, is_active=True)
+        user_notification=request.user, is_active=True)
     for obj in notifications:
         obj.is_active = False
         obj.save()
     return render(request, "notification.html", {"notifications": notifications})
+
+

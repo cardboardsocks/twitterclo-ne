@@ -3,7 +3,7 @@ from twitteruser.models import TwitterUser
 
 
 class LoginForm(forms.Form):
-    username = forms.CharField(max_length=240)
+    username = forms.CharField(max_length=60)
     password = forms.CharField(widget=forms.PasswordInput)
 
 

@@ -23,8 +23,8 @@ from notification.views import *
 urlpatterns = [
     path('', index, name="index"),
     path('login/', login_view, name="login"),
-    path('signup/', signup_view, name="signup"),
     path('logout/', logout_view),
+    path('signup/', signup_view, name="signup"),
     path('addtweet/', add_tweet_view),
     path('tweet/<int:tweet_id>/', tweet_view),
     path('notification/', notification_view),

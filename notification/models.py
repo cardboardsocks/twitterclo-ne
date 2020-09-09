@@ -5,5 +5,5 @@ from twitteruser.models import TwitterUser
 
 class Notification(models.Model):
     is_active = models.BooleanField(default=True)
-    mentioned_user = models.ForeignKey(TwitterUser, on_delete=models.CASCADE)
+    user_notification = models.ForeignKey(TwitterUser, on_delete=models.CASCADE)
     tweet = models.ForeignKey(Tweet, on_delete=models.CASCADE)

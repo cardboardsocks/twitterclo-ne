@@ -18,9 +18,9 @@
 {% if not notifications %}
 <p>No new notifications</p>
 {% endif %}
-
 {% for mention in notifications %}
-    <p>{{ mention.tweet.user.username.0 }}</p>
+<h2>Newest mentions</h2>
+    <p>{{ mention.tweet.user.username }}</p>
         <a href="/u/{{ mention.tweet.user.username }}/">@{{ mention.tweet.user.username }}</a>
     <p>{{ mention.tweet.date }}</p>
     <p>{{ mention.tweet.text }}</p>
