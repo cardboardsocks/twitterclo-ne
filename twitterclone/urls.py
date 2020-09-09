@@ -21,7 +21,7 @@ from twitteruser.views import *
 from notification.views import *
 
 urlpatterns = [
-    path('', index, name="index"),
+    path('', index_view, name="index"),
     path('login/', login_view, name="login"),
     path('logout/', logout_view),
     path('signup/', signup_view, name="signup"),

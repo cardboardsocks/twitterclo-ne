@@ -1,5 +1,3 @@
-
-
 <h4>{{ tweet.text }}</h4>
 
       <ul>
@@ -16,9 +14,6 @@
           <a href="/logout/">Logout</a>
         </li>
       </ul>
-        <a
-          href="/u/{{ request.user.username }}"
-          >@{{ request.user.username }}</a
-        >
+        <a href="/u/{{ request.user.username }}">@{{ request.user.username }}</a>
 
         <h4>{{ tweet.user.username }}</h4>

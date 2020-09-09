@@ -7,7 +7,7 @@ from twitteruser.models import TwitterUser
 
 
 @login_required
-def index(request):
+def index_view(request):
     tweets = Tweet.objects.filter(
         user__in=request.user.following.all()).order_by('-date')
     user = request.user
