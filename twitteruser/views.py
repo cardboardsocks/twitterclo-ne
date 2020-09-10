@@ -1,6 +1,7 @@
 from django.shortcuts import render, HttpResponseRedirect, reverse
 from twitteruser.models import TwitterUser
 from tweet.models import Tweet
+from django.views.generic.base import View
 
 
 def user_view(request, username):
